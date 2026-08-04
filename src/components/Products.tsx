@@ -9,7 +9,7 @@ function ProductCard({ product }: { product: Product }) {
     <article className="group flex flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
       <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
         <img
-          src={product.image}
+          src={`${import.meta.env.BASE_URL}${product.image.replace(/^\//, '')}`}
           alt={product.imageAlt}
           loading="lazy"
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"

@@ -21,7 +21,7 @@ export default function Header() {
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <a href="#inicio" className="flex shrink-0 items-center gap-3" aria-label="Volver al inicio">
           <img
-            src="/logo.png"
+            src={`${import.meta.env.BASE_URL}logo.png`}
             alt="Logo de Alfa Materiales"
             className="h-11 w-11 object-contain drop-shadow-sm sm:h-12 sm:w-12"
           />

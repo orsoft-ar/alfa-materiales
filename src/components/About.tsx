@@ -29,7 +29,7 @@ export default function About() {
             <div className="relative">
               <div className="overflow-hidden rounded-2xl bg-slate-100">
                 <img
-                  src="/products/isoblock.svg"
+                  src={`${import.meta.env.BASE_URL}products/isoblock.svg`}
                   alt="Materiales de construcción de Alfa Materiales"
                   className="h-full w-full object-cover"
                   loading="lazy"

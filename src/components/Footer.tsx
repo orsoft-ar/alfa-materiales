@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <a href="#inicio" className="flex items-center gap-3">
               <img
-                src="/logo.png"
+                src={`${import.meta.env.BASE_URL}logo.png`}
                 alt="Logo de Alfa Materiales"
                 className="h-12 w-12 object-contain"
               />

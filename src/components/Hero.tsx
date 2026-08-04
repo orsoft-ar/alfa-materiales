@@ -19,7 +19,7 @@ export default function Hero() {
       <div className="relative mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-center px-4 py-28 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           <div className="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/10 px-4 py-2 backdrop-blur">
-            <img src="/logo.png" alt="Logo de Alfa Materiales" className="h-7 w-7 object-contain" />
+            <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Logo de Alfa Materiales" className="h-7 w-7 object-contain" />
             <span className="text-sm font-semibold text-white">Corralón y Ferretería en La Plata</span>
           </div>
 

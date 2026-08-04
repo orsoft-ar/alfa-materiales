@@ -1,0 +1,9 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#f1f5f9"/>
+  <g>
+    <rect x="90" y="60" width="220" height="120" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="4"/>
+    <polygon points="90,120 310,120 305,180 95,180" fill="#f8fafc"/>
+    <text x="200" y="215" font-family="Arial" font-size="26" font-weight="bold" fill="#1e293b" text-anchor="middle">CAL</text>
+    <rect x="140" y="228" width="120" height="10" rx="5" fill="#d8232a"/>
+  </g>
+</svg>

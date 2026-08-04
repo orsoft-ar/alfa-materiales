@@ -6,7 +6,7 @@ import { CATALOG_FILTERS, PRODUCTS, waLink, type CatalogFilter, type Product } f
 
 function ProductCard({ product }: { product: Product }) {
   return (
-    <article className="group flex flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
+    <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
       <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
         <img
           src={`${import.meta.env.BASE_URL}${product.image.replace(/^\//, '')}`}
@@ -20,24 +20,16 @@ function ProductCard({ product }: { product: Product }) {
       </div>
       <div className="flex flex-1 flex-col p-5 sm:p-6">
         <h3 className="text-lg font-bold text-slate-900">{product.name}</h3>
-        <p className="mt-1 text-sm text-slate-500">{product.description}</p>
-        <div className="mt-5 flex flex-1 items-end gap-2">
+        <p className="mt-1 text-sm text-slate-500 line-clamp-2">{product.description}</p>
+        <div className="mt-5 flex flex-1 items-end">
           <a
             href={waLink(product.message)}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex flex-1 items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-primary-dark"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-primary-dark"
           >
             <MessageCircle size={16} />
             Consultar por WhatsApp
-          </a>
-          <a
-            href={waLink(product.message)}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-lg border border-gray-200 px-4 py-2.5 text-sm font-semibold text-slate-700 transition-colors hover:border-primary hover:text-primary"
-          >
-            Consultar precio
           </a>
         </div>
       </div>
@@ -82,7 +74,7 @@ export default function Products() {
 
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {filtered.map((product, i) => (
-            <Reveal key={product.name} delay={(i % 4) * 80}>
+            <Reveal key={product.name} delay={(i % 4) * 80} className="h-full">
               <ProductCard product={product} />
             </Reveal>
           ))}
